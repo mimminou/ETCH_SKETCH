@@ -19,40 +19,39 @@ function createGrid(){
             containerDiv.appendChild(line[i]);
         }
     }
-    return line;
   }
 
 createGrid();
 
-
 let allpixels = document.querySelectorAll(".mrow");
-console.log(allpixels.length);
-
 let mousePressed = false;
 
-for (let w = 0; w<allpixels.length;w++){
-    allpixels[w].addEventListener("mousedown", event =>{
+
+allpixels.forEach(element =>{
+    element.addEventListener("mousedown", event =>{
         mousePressed = true;
         event.target.style.backgroundColor="black";
 
     });
-    
-    allpixels[w].addEventListener("mouseup", event =>{
+});
+
+allpixels.forEach(element =>{
+    element.addEventListener("mouseup", event =>{
         mousePressed = false;
     });
+});
 
-
-    allpixels[w].addEventListener("mouseover", event => {
+allpixels.forEach(element =>{
+    element.addEventListener("mouseover", event => {
         if(mousePressed){
             event.target.style.backgroundColor="black";
-
         }
     });
-}
+});
 
 const mybtn = document.querySelector(".clearer");
 mybtn.addEventListener("click", event =>{
     allpixels.forEach(element =>{
         element.style.backgroundColor="whitesmoke";
-    })  
+    });  
 })
