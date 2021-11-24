@@ -1,0 +1,35 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:10px;
+    padding:20px;
+}
+
+.Container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: fit-content;
+    border: 1px grey solid;
+}
+
+.mline{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.mrow{
+    flex: 1,0,auto;
+    background-color: whitesmoke
+}
+
+.clearer{
+    padding: 10px;
+    margin: 10px;
+}
+
